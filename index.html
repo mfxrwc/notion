@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Slider Fullscreen Redondeado</title>
+  <title>Slider Redondeado Fullscreen</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
@@ -15,10 +15,11 @@
 
     body {
       font-family: "Lexend", sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab); /* 👈 fondo bonito */
-      color: #e5ebf3;
+      background-color: white; /* ✅ Fondo blanco */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
-      overflow: hidden;
     }
 
     .slider {
@@ -26,7 +27,7 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      border-radius: 30px; /* 👈 esquinas redondeadas */
+      border-radius: 40px; /* ✅ Bordes redondeados */
     }
 
     .slide {
@@ -43,7 +44,7 @@
       opacity: 1;
     }
 
-    .slide:first-child {
+    .slide:nth-child(1) {
       background: url("IMG_1949.jpeg") no-repeat center center/cover;
     }
 
@@ -80,9 +81,9 @@
 
     .buttons button {
       pointer-events: auto;
-      border: 2px solid #e5ebf3;
+      border: 2px solid #fff;
       background-color: transparent;
-      color: #e5ebf3;
+      color: #fff;
       cursor: pointer;
       padding: 13px 15px;
       border-radius: 50%;
@@ -91,10 +92,9 @@
     }
 
     .buttons button:hover {
-      background-color: #e5ebf3;
-      color: #362a2b;
+      background-color: #fff;
+      color: #000;
     }
-
   </style>
 </head>
 <body>
