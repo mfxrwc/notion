@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Slider con bordes redondeados</title>
+  <title>Slider Fullscreen Redondeado</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
@@ -16,21 +15,18 @@
 
     body {
       font-family: "Lexend", sans-serif;
-      background-color: #362a2b;
+      background: linear-gradient(135deg, #1f1c2c, #928dab); /* 👈 fondo bonito */
       color: #e5ebf3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     .slider {
       position: relative;
-      width: 90vw;
-      height: 90vh;
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
-      border-radius: 25px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 30px; /* 👈 esquinas redondeadas */
     }
 
     .slide {
@@ -79,9 +75,11 @@
       justify-content: space-between;
       padding: 0 1rem;
       transform: translateY(-50%);
+      pointer-events: none;
     }
 
     .buttons button {
+      pointer-events: auto;
       border: 2px solid #e5ebf3;
       background-color: transparent;
       color: #e5ebf3;
@@ -97,27 +95,10 @@
       color: #362a2b;
     }
 
-    @media (min-width: 640px) and (min-height: 640px) {
-      .slide .content {
-        bottom: 70px;
-        left: -600px;
-        width: 600px;
-        padding: 2rem;
-        line-height: 1.6;
-      }
-
-      .slide .content h1 {
-        font-size: 2rem;
-      }
-
-      .slide.current .content {
-        transform: translateX(600px);
-      }
-    }
   </style>
 </head>
-
 <body>
+
   <div class="slider">
     <div class="slide current"></div>
     <div class="slide"></div>
@@ -180,6 +161,6 @@
       slideInterval = setInterval(nextSlide, intervalTime);
     }
   </script>
-</body>
 
+</body>
 </html>
